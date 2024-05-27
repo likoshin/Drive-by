@@ -1,100 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #007bff;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-        .header h2 {
-            margin: 5px 0;
-        }
-        main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: calc(100vh - 160px); /* Через футер */
-        }
-        .img {
-            text-align: center;
-            margin-right: 20px;
-        }
-        .container {
-            width: 300px;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        input[type="text"], input[type="password"], .register-btn {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-        }
-        input[type="submit"], .register-btn {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 3px;
-            background-color: #007bff;
-            color: #fff;
-            cursor: pointer;
-            margin-bottom: 10px;
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
-
+<html lang="uk">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Center</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизація</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <div class="header">
-            <h2>Інформаційно-аналітичний центр</h2>
-            <h3>соціологічних досліджень</h3>
-        </div>
-    </header>
-    <main>
-        <div class="img">
-            <img class="icon" src="logo.png" alt="icon" width="240px" />
-        </div>
-        <div class="container">
-            <h2>Авторизація</h2>
-            <form action="/login" method="post">
-                <input type="text" name="username" placeholder="Логін" required>
-                <input type="password" name="password" placeholder="Пароль" required>
-                <input type="submit" value="Увійти">
-            </form>
-            <button class="register-btn">
-                <img src="diya.png" alt="diya" width="20px" style="vertical-align: middle; margin-right: 10px;">
-                Увійти за допомогою Дія
-            </button>
-        </div>
-        <footer>
-            <p>&copy; 2024 Вася Сус. Усі права захищені.</p>
-        </footer>
-
-    </main>
+    <div class="container">
+        <h2>Форма авторизації</h2>
+        <form action="auth.php" method="post">
+            <label for="username">Логін:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Увійти</button>
+        </form>
+    </div>
 </body>
+</html>
